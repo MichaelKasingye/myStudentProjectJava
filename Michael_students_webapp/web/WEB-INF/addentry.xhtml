@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Address book</title>
+<!-- <h: outputStlesheet name="style.css" library="css"/> -->
+</h:head>
+<h:body>
+<h1>Address Book: Add Entry</h1>
+
+<h:form>
+<h:panelGrid columns = "3">
+
+<h:outputText value = "First name"/>
+<h:inputText id = "firstNameInputText" required = "true" 
+requiredMessage="Please insert the first name" 
+value ="#{addressBean.firstName}" maxlength = "30"/>
+<h:message for = "firstNameInputText" styleClass="error"/>
+
+<h:outputText value = "Last name"/>
+<h:inputText id = "lastNameInputText" required = "true" 
+requiredMessage="Please insert the last name" 
+value ="#{addressBean.lastName}" maxlength = "30"/>
+<h:message for = "lastNameInputText" styleClass="error"/>
+
+<h:outputText value = "Street"/>
+<h:inputText id = "streetInputText" required = "true" 
+requiredMessage="Please insert the street address." 
+value ="#{addressBean.street}" maxlength = "30"/>
+<h:message for = "streetInputText" styleClass="error"/>
+
+<h:outputText value = "City"/>
+<h:inputText id = "cityInputText" required = "true" 
+requiredMessage="Please insert the city" 
+value ="#{addressBean.city}" maxlength = "30"/>
+<h:message for = "cityInputText" styleClass="error"/>
+
+<h:outputText value = "State"/>
+<h:inputText id = "stateInputText" required = "true" 
+requiredMessage="Please insert the state" 
+value ="#{addressBean.state}" maxlength = "30"/>
+<h:message for = "stateInputText" styleClass="error"/>
+
+<h:outputText value = "Zipcode"/>
+<h:inputText id = "zipcodeInputText" required = "true" 
+requiredMessage="Please insert the zipcode" 
+value ="#{addressBean.zipcode}" maxlength = "30"/>
+<h:message for = "zipcodeInputText" styleClass="error"/>
+
+</h:panelGrid>
+<h:commandButton value = "Save Address" 
+action = "#{addressBean.save}"/>
+</h:form>
+</h:body>
+</html>
+
